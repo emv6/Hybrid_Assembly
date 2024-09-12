@@ -6,6 +6,7 @@ All bioinformatic analysis was conducted on the New Zealand eScience Infrastruct
 
 ## FastQC 
 [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to check for QC of the samples for adaptor content and sequence quality
+
 ```#!/bin/bash -e
 #SBATCH --cpus-per-task=8 --mem 50Gb --time 1:00:00 -J FASTQC_EV
 
