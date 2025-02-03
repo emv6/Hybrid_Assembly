@@ -31,7 +31,7 @@ echo "FastQC analysis completed for all samples"
 [SKESA](https://github.com/ncbi/SKESA) Assembly 
 Genome Assembly was completed using a [SKESA script](https://github.com/emv6/Hybrid_Assembly/blob/main/skesa.sh)
 
-[Pilon](https://github.com/broadinstitute/pilon) was used to polish the Illumina assembly 
+[Pilon](https://github.com/broadinstitute/pilon) [script](https://github.com/emv6/Hybrid_Assembly/blob/main/pilon.sh) was used to polish the Illumina assembly 
 
 [CheckM](https://github.com/Ecogenomics/CheckM), [Quast](https://github.com/ablab/quast), [BUSCO](https://busco.ezlab.org/) were used to assess the Illumina assembly quality. The detailed [script](https://github.com/emv6/Hybrid_Assembly/blob/main/CheckM_Quast_BUSCO.sh) 
 
