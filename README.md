@@ -2,10 +2,10 @@
 
 ![bash](https://img.shields.io/badge/language-bash-green)
 
-All bioinformatic analysis was conducted on the New Zealand eScience Infrastructure [NeSI](https://github.com/nesi). FastQC used for QC of the Illumina sequencing of the 23 *S. aureus* samples.
+All bioinformatic analysis was conducted on the New Zealand eScience Infrastructure [NeSI](https://github.com/nesi). FastQC used for QC of the Illumina sequencing of the 11 *S. aureus* samples.
 
 ## FastQC 
-[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to check for QC of the samples for adaptor content and sequence quality
+[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to check for QC the Illumina data of all the samples checking for adaptor content and sequence quality
 
 ```#!/bin/bash -e
 #SBATCH --cpus-per-task=8 --mem 50Gb --time 1:00:00 -J FASTQC_EV
@@ -29,7 +29,7 @@ done
 echo "FastQC analysis completed for all samples"
 ```
 
-## Assembly method of 23 *S. aureus* isolates 
+## Hybrid Assembly method of 11 *S. aureus* isolates 
 
 #### Guppy
 [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview) was chosen as the basecaller specifying the super accurate model. 
