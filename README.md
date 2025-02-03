@@ -36,6 +36,7 @@ Genome Assembly was completed using a [SKESA script](https://github.com/emv6/Hyb
 [CheckM](https://github.com/Ecogenomics/CheckM), [Quast](https://github.com/ablab/quast), [BUSCO](https://busco.ezlab.org/) were used to assess the Illumina assembly quality. The detailed [script](https://github.com/emv6/Hybrid_Assembly/blob/main/CheckM_Quast_BUSCO.sh) 
 
 ## Nanopore Assembly 
+The Nanopore assembly was followed using this [script](https://github.com/emv6/Hybrid_Assembly/blob/main/Nanopore_Assembly.sh)
 [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview) - Basecaller with the Super Accurate Model \
 [Filtlong](https://github.com/rrwick/Filtlong) -Remove reads shorter than 1kbp and exclude the worst 5% of the reads. \
 [Porechop](https://github.com/rrwick/Porechop) - Remove any adaptors \
