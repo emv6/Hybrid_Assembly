@@ -141,20 +141,4 @@ module load SAMtools/1.16.1-GCC-11.3.0
 samtools index Pilon1_$filename.bam
 ```
 #Pilon was run three times and bwa_mem_pilon was run twice. 
-CheckM & QUAST
-```
-#!/bin/bash -e
-#SBATCH -c 5 --mem=10Gb --time 00:30:00 -J CHECKM_EV
-module load CheckM/1.2.1-gimkl-2022a-Python-3.10.5
-module load QUAST/5.2.0-gimkl-2022a
 
-OUTPUT=CheckM_Quast/
-INPUT=PolishedGenomes/
-
-checkm taxon_set genus "Staphylococcus" staph.ms 
-checkm analyze -t 16 -x fa staph.ms $INPUT $OUTPUT/checkmoutput 
-checkm qa -t 16 staph.ms $OUTPUT/checkmoutput
-##Need to review contamination and completeness - contamination less than 5% and completeness above 90%
-
-quast.py $INPUT/*.fa
-```
