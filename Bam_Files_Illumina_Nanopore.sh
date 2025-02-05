@@ -12,8 +12,8 @@ for GENOME_PREFIX in "${GENOMES[@]}"; do
   echo "Processing genome $GENOME_PREFIX..."
 
 ILLUMINA_GENOME="${GENOME_PREFIX}_contigs.fasta"
-READS_1="Illumina_Assemblies/${GENOME_PREFIX}_R1.fq.gz 
-READS_2="Illumina_Assemblies/${GENOME_PREFIX}_R2.fq.gz
+READS_1="Illumina_Assemblies/${GENOME_PREFIX}_R1.fq.gz" 
+READS_2="Illumina_Assemblies/${GENOME_PREFIX}_R2.fq.gz"
 NANOPORE_READS="${GENOME_PREFIX}_Chopper.fastq.gz"
 NANOPORE_GENOME="${GENOME_PREFIX}_NanoporeAssembly.fasta"
 
