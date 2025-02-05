@@ -15,8 +15,8 @@ for GENOME_PREFIX in "${GENOMES[@]}"; do
   echo "Processing genome $GENOME_PREFIX..."
 
 GENOME="${GENOME_PREFIX}_contigs.fasta"
-READS_1="Illumina_Assemblies/${GENOME_PREFIX}_R1.fq.gz 
-$READS_2="Illumina_Assemblies/${GENOME_PREFIX}_R2.fq.gz
+READS_1="Illumina_Assemblies/${GENOME_PREFIX}_R1.fq.gz" 
+READS_2="Illumina_Assemblies/${GENOME_PREFIX}_R2.fq.gz"
 
 bwa index $GENOME #index reference genome
 
