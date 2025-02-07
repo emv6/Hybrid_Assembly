@@ -76,8 +76,7 @@ ls 20*/*krak | xargs -I {} grep "Staphylococcus aureus" {} | cut -f2,6 > staph_a
 
 # Seperating our count file into subspecies
 awk -F '\t' -v OFS=, '{if(strain[$2]){strain[$2]+=$1}else{strain[$2]=$1}}END{for (name in strain){ print name, strain[name]}}' staph_a_reads.txt
-
-
+```
 
 
 
