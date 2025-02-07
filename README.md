@@ -68,3 +68,17 @@ echo "--output spa.xls" &>> list_of_genomes.txt
 tr '\n' ' ' < list_of_genomes.txt > spa_command.txt
 chmod +x spa_command.txt
 ./ spa_command.txt
+
+## [Kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown) Assembly Analysis 
+```
+# Counting *S. aureus* reads into the kraken2 output files 
+ls 20*/*krak | xargs -I {} grep "Staphylococcus aureus" {} | cut -f2,6 > staph_a_reads.txt
+
+# Seperating our count file into subspecies
+awk -F '\t' -v OFS=, '{if(strain[$2]){strain[$2]+=$1}else{strain[$2]=$1}}END{for (name in strain){ print name, strain[name]}}' staph_a_reads.txt
+
+
+
+
+
+
