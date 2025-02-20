@@ -33,7 +33,7 @@ Genome Assembly was completed using a [SKESA script](https://github.com/emv6/Hyb
 
 [Pilon](https://github.com/broadinstitute/pilon) was used to polish the Illumina assembly using this detailed [script](https://github.com/emv6/Hybrid_Assembly/blob/main/pilon.sh) 
 
-[CheckM](https://github.com/Ecogenomics/CheckM), [Quast](https://github.com/ablab/quast), [BUSCO](https://busco.ezlab.org/) were used to assess the Illumina assembly quality. The detailed [script] (https://github.com/emv6/Hybrid_Assembly/blob/main/CheckM_Quast_BUSCO.sh) is listed here
+[CheckM](https://github.com/Ecogenomics/CheckM), [Quast](https://github.com/ablab/quast), [BUSCO](https://busco.ezlab.org/) were used to assess the Illumina assembly quality. The detailed [script](https://github.com/emv6/Hybrid_Assembly/blob/main/CheckM_Quast_BUSCO.sh) is listed here
 
 ## Nanopore Assembly 
 The Nanopore assembly was followed using this [script](https://github.com/emv6/Hybrid_Assembly/blob/main/Nanopore_Assembly.sh)\
@@ -70,6 +70,8 @@ tr '\n' ' ' < list_of_genomes.txt > spa_command.txt
 chmod +x spa_command.txt
 ./ spa_command.txt
 ```
+## Genome Coverage of Illumina and Nanopore Assemblies 
+To determine the genome coverage of each genome's Illumina and Nanopore assembly a [script](https://github.com/emv6/Hybrid_Assembly/blob/main/Bam_Files_Illumina_Nanopore.sh) was generated to map the illumina reads to the illumina assembly using BWA mem. SAMtools depth was used to determine genome coverage. The nanopore reads were mapped to the nanopore assembly using minimap. SAMtools depth was used to determine genome coverage. 
 ## [Kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown) Assembly Analysis 
 ```
 # Counting *S. aureus* reads into the kraken2 output files 
@@ -78,6 +80,7 @@ ls 20*/*krak | xargs -I {} grep "Staphylococcus aureus" {} | cut -f2,6 > staph_a
 # Seperating our count file into subspecies
 awk -F '\t' -v OFS=, '{if(strain[$2]){strain[$2]+=$1}else{strain[$2]=$1}}END{for (name in strain){ print name, strain[name]}}' staph_a_reads.txt
 ```
+
 
 
 
