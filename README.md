@@ -73,6 +73,7 @@ chmod +x spa_command.txt
 ## Genome Coverage of Illumina and Nanopore Assemblies 
 To determine the genome coverage of each genome's Illumina and Nanopore assembly a [script](https://github.com/emv6/Hybrid_Assembly/blob/main/Bam_Files_Illumina_Nanopore.sh) was generated to map the illumina reads to the illumina assembly using BWA mem. SAMtools depth was used to determine genome coverage. The nanopore reads were mapped to the nanopore assembly using minimap. SAMtools depth was used to determine genome coverage. 
 ## [Kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown) Assembly Analysis 
+Creating a custom Kraken2 database with the eleven hybrid *S. aureus* reference genomes following the developer's instructions. The following code was used to determine how many reads mapped to the hybrid strains. 
 ```
 # Counting *S. aureus* reads into the kraken2 output files 
 ls 20*/*krak | xargs -I {} grep "Staphylococcus aureus" {} | cut -f2,6 > staph_a_reads.txt
