@@ -2,9 +2,9 @@ from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 
 # Input files
-fasta_file = "23EV599.fasta"
-gff_file = "23EV599.gff"
-output_file = "23EV599_rotated.fasta"
+fasta_file = "sequence.fasta"
+gff_file = "sequence.gff"
+output_file = "sequence_rotated.fasta"
 
 # Find dnaA in GFF
 dnaA_found = False
